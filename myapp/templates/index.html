@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-red-300">Welcome to my Blog!</h1>
+<h2>{{ title }}</h2>
+
+<h2>Students List</h2>
+
+<ul>
+    {% if students %}
+    {% for student in students %}
+    <li>{{student.name }} - Age: {{student.age}} - Grade: {{student.grade}}
+        {% if student.grade == 'A' %}
+        <strong>(Top Student) </strong>
+        {% endif %}
+    </li>
+
+    {% endfor%}
+    {% else %}
+    <p>No students found</p>
+    {% endif %}
+
+</ul>
+<img src="{{ STIC_URL }}static/images/KRA-Times-Tower-og_image.webp" width="400" height="400" alt="KRA Image">
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-3xl font-blod mb-6">Blog List</h2>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    {% for blog in blogs %}
+    <div class="border p-4 rounded-lg shadow-md">
+        
+    <h2>{{ blog.title }}</h2>
+    <p>{{ blog.text }}</p>
+    <p>{{ blog.published_date }}</p>
+    <p>By {{ blog.author }}</p>
+    
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
