@@ -1,8 +1,37 @@
-<nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/contact/">Contact</a></li>
-        <li><a href="/blogs/">Blogs</a></li>
+<nav class="bg-gray-800 p-4">
+    <ul class="flex justify-between items-center">
+        <li>
+            <a href="{% url 'index' %}" 
+               class="text-white hover:text-indigo-400 transition duration-300 ease-in-out font-medium">
+                Home
+            </a>
+        </li>
+        
+        <div class="flex space-x-6">
+            <li>
+                <a href="{% url 'about' %}" 
+                   class="text-white hover:text-indigo-400 transition duration-300 ease-in-out font-medium">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'contact' %}" 
+                   class="text-white hover:text-indigo-400 transition duration-300 ease-in-out font-medium">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'blogs' %}" 
+                   class="text-white hover:text-indigo-400 transition duration-300 ease-in-out font-medium">
+                    Blogs
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'subscribe' %}" 
+                   class="bg-indigo-600 px-3 py-2 rounded-lg text-white font-semibold hover:bg-indigo-700 transition duration-300 ease-in-out">
+                    Subscribe
+                </a>
+            </li>
+        </div>
     </ul>
 </nav>

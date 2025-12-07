@@ -26,4 +26,13 @@ class Blog(models.Model):
     def __str__(self):
         return self.title
     
-   
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    published = models.DateField(null=True, blank=True)
+    
+class Subscriber(models.Model):
+    email = models.EmailField(unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.email

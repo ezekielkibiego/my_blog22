@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Blog, Author
+from .models import Blog, Author, Book, Subscriber
 
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
@@ -16,3 +16,7 @@ class AuthorAdmin(admin.ModelAdmin):
     list_display_links = ('email',)
     
     list_filter = ('first_name', 'last_name',)
+    
+admin.site.register(Book)
+admin.site.register(Subscriber)
+
